@@ -21,8 +21,6 @@ print({"API_ID": api_id, "API_HASH": api_hash, "Chat 1": chat_1, "Chat 2": chat_
 client = TelegramClient('anon', api_id, api_hash)
 client.connect()
 client.sign_in(phone=api_phone)
-me = client.get_me()
-print("Usuário autenticado:", me.stringify())
 
 @client.on(events.NewMessage(chats = [chat_1, chat_2, chat_3]))
 async def handler(event):
