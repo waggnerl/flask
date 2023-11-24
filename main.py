@@ -4,8 +4,8 @@ from ably import AblyRealtime
 import os
 
 
-api_id = os.getenv("api_id") 
-api_hash = os.getenv("api_hash")
+api_id = "22165656"
+api_hash = "e7ffdb2615ba7651095641331679943f"
 ably_token = os.getenv("ably_token") 
 ably_chanel = os.getenv("ably_chanel") 
 ably_publish = os.getenv("ably_publish") 
