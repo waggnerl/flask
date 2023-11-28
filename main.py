@@ -13,12 +13,12 @@ ably_publish = os.getenv("ably_publish")
 chat_1 = os.getenv("chat_1") 
 chat_2 = os.getenv("chat_2") 
 chat_3 = os.getenv("chat_3") 
-
+session = os.getenv("session")
 
 from telethon import TelegramClient, events
 
 print({"API_ID": api_id, "API_HASH": api_hash, "Chat 1": chat_1, "Chat 2": chat_2, "Chat 3": chat_3, "Ably Token": ably_token, "Ably Chanel": ably_chanel, "Ably Publish": ably_publish})
-client = TelegramClient('anon', api_id, api_hash)
+client = TelegramClient(session, api_id, api_hash)
 client.connect()
 client.sign_in(phone=api_phone)
 
